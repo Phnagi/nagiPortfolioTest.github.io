@@ -422,6 +422,7 @@ onMounted(() =>{
 body::-webkit-scrollbar {
     display: none;
 }
+
 .worksPageMainScroll0{
 
     position: absolute;
@@ -519,7 +520,7 @@ body::-webkit-scrollbar {
                     left: -10%;
                 }
                 @media(max-width: 576px){
-                    left: -20%;
+                    left: -60%;
                 }
             }
         }
@@ -561,7 +562,7 @@ body::-webkit-scrollbar {
                     left: -10%;
                 }
                 @media(max-width: 576px){
-                    left: -40%;
+                    left: -80%;
                 }
             }
             #mapleImg{
@@ -577,7 +578,7 @@ body::-webkit-scrollbar {
                 left: -10%;
             }
             @media(max-width: 576px){
-                left: -40%;
+                left: -90%;
             }
             }
             #photoImg{
@@ -593,7 +594,7 @@ body::-webkit-scrollbar {
                     left: -10%;
                 }
                 @media(max-width: 576px){
-                    left: -20%;
+                    left: -40%;
                 }
             }
             #otherImg{
@@ -710,8 +711,9 @@ body::-webkit-scrollbar {
 
                     }
                     @media(max-width: 576px){
-                        font-size: 10px;
-                        width:150px ;
+                        font-size: 12px;
+                        width:100px ;
+                        margin-top: 10px;
                     }
                 }
             }

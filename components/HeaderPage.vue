@@ -54,8 +54,8 @@
         <NuxtLink to="/works" >Works</NuxtLink>
     </div>
     <div class="headerContentBox">
-        <NuxtLink to="/">聯絡</NuxtLink>
-        <NuxtLink to="/">Content</NuxtLink>
+        <NuxtLink to="/contact">聯絡</NuxtLink>
+        <NuxtLink to="/contact">contact</NuxtLink>
     </div>
     <div class="headerContentBox2">
         <a href="">IG</a>

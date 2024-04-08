@@ -50,7 +50,7 @@ onMounted(() => {
                 <li><NuxtLink to="/">首頁</NuxtLink></li>
                 <li><NuxtLink to="/about">關於</NuxtLink></li>
                 <li><NuxtLink to="/works">作品</NuxtLink></li>
-                <li><NuxtLink to="/">聯絡</NuxtLink></li>
+                <li><NuxtLink to="/contact">聯絡</NuxtLink></li>
             </ul>
             <div class="footerContentsocial">
                 <p>Email </p>

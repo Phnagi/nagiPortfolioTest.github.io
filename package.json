@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@studio-freight/lenis": "^1.0.39",
+    "bootstrap": "^5.3.3",
     "gsap": "^3.12.5",
     "nuxt": "^3.10.3",
     "vue": "^3.4.21",
@@ -19,5 +20,4 @@
   "devDependencies": {
     "sass": "^1.72.0"
   }
-
 }
