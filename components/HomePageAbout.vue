@@ -40,9 +40,12 @@ const homePageContent = ref(null);
 <template>
   <div id="homePageAbout" ref="homePageAbout">
     <p id="homePageTittle" ref="homePageTittle">關於</p>
-    <p id="homePageContent" ref="homePageContent">車黑坡怎汁錯「至借土水而娘苦」相固貝法由造了王子食即兔國收綠嗎是封兆：坐像男貫叫勿；問跑幼牛貝吧姐。
-        連得者正木新司好植：向向即世活。
-        歌片毛犬平牠讀光門世？拍拍在科星實燈室貝說笑旁。</p>
+    <p id="homePageContent" ref="homePageContent">
+        一名喜歡設計、網頁開發以及攝影的大學生，喜歡創建優雅、用戶友好且具有創造性的產品。
+        我對於創意和技術的結合充滿著熱情，對於使用者設計等領域的熱忱也驅使我不斷學習和探索新的技術和設計趨勢，
+        在網頁開發上也不斷精進自己，在團隊合作上，由於會設計及寫程式，可以很好理解設計時與技術上的問題，
+        我相信，通過將技術與設計融合在一起，可以創造出令人更加便利的用戶體驗，這正是我每天努力的目標。
+    </p>
   </div>
 </template>
 
@@ -99,21 +102,31 @@ const homePageContent = ref(null);
         right:7%;
         position: relative;
         width: 20%;
-        height: 20%;
+        height: 30%;
         margin: 0;
         writing-mode: vertical-rl;
 
         font-family: "Noto Sans TC";
-        font-size: 12px;
+        font-size: 13px;
         font-style: normal;
         letter-spacing: 0.3rem;
         line-height: 1.6rem;
 
         @media(max-width: 576px){
-            font-size: 10px;
-            height:25%;
+            font-size: 12px;
+            width: 80%;
+            height:40%;
             letter-spacing: 0.3rem;
             line-height: 1.4rem;
+            writing-mode: horizontal-tb;
+        }
+        @media(max-width: 280px){
+            font-size: 10px;
+            width: 80%;
+            height:40%;
+            letter-spacing: 0.3rem;
+            line-height: 1.4rem;
+            writing-mode: horizontal-tb;
         }
         
     }

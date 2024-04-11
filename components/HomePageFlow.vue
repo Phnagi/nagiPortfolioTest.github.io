@@ -30,45 +30,45 @@ onMounted(() => {
     <div class="flowbox" >
         <p class="flowTitle">攝影作品</p>
         <div class="flow" ref="flow">
-            <a href="" class="flowImgBox" id="fl-1" data-speed="1">
+            <NuxtLink href="" class="flowImgBox" id="fl-1" data-speed="1">
                 <img src="@/assets/images/photo/1.jpg" alt="">
-            </a>
-            <a href="" class="flowImgBox" id="fl-2" data-speed="2">
+            </NuxtLink>
+            <NuxtLink href="" class="flowImgBox" id="fl-2" data-speed="2">
                 <img src="@/assets/images/photo/first.jpg" alt="">
-            </a >
-            <a href="" class="flowImgBox" id="fl-3" data-speed="3">
+            </NuxtLink >
+            <NuxtLink href="" class="flowImgBox" id="fl-3" data-speed="3">
                 <img src="@/assets/images/photo/3.jpg" alt="">
-            </a>
-            <a href="" class="flowImgBox" id="fl-4" data-speed="6">
+            </NuxtLink>
+            <NuxtLink href="" class="flowImgBox" id="fl-4" data-speed="6">
                 <img src="@/assets/images/photo/4.jpg" alt="">
-            </a>
-            <a href="" class="flowImgBox" id="fl-5" data-speed="4">
+            </NuxtLink>
+            <NuxtLink href="" class="flowImgBox" id="fl-5" data-speed="4">
                 <img src="@/assets/images/photo/5.jpg" alt="">
-            </a >
-            <a href="" class="flowImgBox" id="fl-6" data-speed="10">
+            </NuxtLink >
+            <NuxtLink href="" class="flowImgBox" id="fl-6" data-speed="10">
                 <img src="@/assets/images/photo/6.jpg" alt="">
-            </a>
-            <a href="" class="flowImgBox" id="fl-7" data-speed="7">
+            </NuxtLink>
+            <NuxtLink href="" class="flowImgBox" id="fl-7" data-speed="7">
                 <img src="@/assets/images/photo/7.jpg" alt="">
-            </a>
-            <a href="" class="flowImgBox" id="fl-8" data-speed="5">
+            </NuxtLink>
+            <NuxtLink href="" class="flowImgBox" id="fl-8" data-speed="5">
                 <img src="@/assets/images/photo/8.jpg" alt="">
-            </a >
-            <a href="" class="flowImgBox" id="fl-9" data-speed="8">
+            </NuxtLink >
+            <NuxtLink href="" class="flowImgBox" id="fl-9" data-speed="8">
                 <img src="@/assets/images/photo/9.jpg" alt="">
-            </a>
-            <a href="" class="flowImgBox" id="fl-10" data-speed="10">
+            </NuxtLink>
+            <NuxtLink href="" class="flowImgBox" id="fl-10" data-speed="10">
                 <img src="@/assets/images/photo/10.jpg" alt="">
-            </a>
-            <a href="" class="flowImgBox" id="fl-11" data-speed="7">
+            </NuxtLink>
+            <NuxtLink href="" class="flowImgBox" id="fl-11" data-speed="7">
                 <img src="@/assets/images/photo/11.jpg" alt="">
-            </a >
-            <a href="" class="flowImgBox" id="fl-12" data-speed="5">
+            </NuxtLink >
+            <NuxtLink to="/works/photo" class="flowImgBox" id="fl-12" data-speed="5">
                 <div class="flowPBox">
                     <p>更多</p>
                 </div>
 
-            </a>
+            </NuxtLink>
         </div>
     </div>
 

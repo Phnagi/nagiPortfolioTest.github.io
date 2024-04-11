@@ -258,6 +258,7 @@
                     justify-content: flex-end;
                     order: 1;
                     font-size: 14px;
+                    margin:0% 0% 0% 0% ;
                 }
             }
         }

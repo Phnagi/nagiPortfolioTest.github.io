@@ -3,6 +3,7 @@
 import { gsap } from "gsap";   
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import GoAhand from "~/pages/works/goAhand.vue";
 // import { NuxtLink } from "#build/components";
 
 let worksPageMainBox = ref(null)
@@ -12,6 +13,18 @@ let worksPageMainScroll1 = ref(null)
 let worksPageMainScroll2 = ref(null)
 let worksPageMainScroll3 = ref(null)
 let worksPageMainScroll4 = ref(null)
+
+//文字
+let worksPageMainText=reactive({
+    GoAhand:'一個不論是身心障礙者或是普通人都可以拿來規劃無障礙旅行計畫及日常使用的一個app，可以根據你選擇的地點給予使用者無障礙路線導航與盲人輔助導航的需求。',
+    HomeTrust:"嘉信驗屋，致力於提供全面的房屋檢測服務，為客戶提供可靠、準確且專業的房屋檢測服務，幫助他們了解房屋的真實狀況，保護他們的投資和利益。",
+    Drop:'',
+    Maple:"楓茶米休閒農業區為一個封閉的里山環境，保留農田山林，溪谷終年有水，谷地以水稻種植為主，山嶺間茶園遍布，還有網室蔬菜及花卉苗木培育等，隨處可見豐富多樣的農村自然生態樣貌。",
+    Photo:"平時的我喜歡在休閒或通勤時間，在街上街頭攝影，我喜歡拍攝光、生活的人們、及街景等，擅長運用強烈的光影構圖",
+    other:'除了以上的設計及拍攝外，還有一些零散的作品'
+                                
+    })
+
 ////改變DOM
     //控制影片/照片
     let videoImgControl = ref(true);
@@ -52,6 +65,7 @@ let worksPageMainScroll4 = ref(null)
     })
 //
 onMounted(() =>{
+
     let worksImg2 = document.querySelector(".worksImg");
     // document.addEventListener("scroll",(e) => {
     //     console.log(e)
@@ -154,9 +168,7 @@ onMounted(() =>{
                 worksindex_GoAhandBolean.value=false;
                 worksindex_HomeTrustBolean.value=true;
 
-                worksPageintroContent.value.innerText=
-                `e-2-2s車黑坡怎汁錯「至借土水而娘苦」相固貝法由造了王子食即兔國收綠嗎是封兆,
-                坐像男貫叫勿；問跑幼牛貝吧姐。連得者正木新司好植：向向即世活。`
+                worksPageintroContent.value.innerText=worksPageMainText.HomeTrust
                 
                 worksPageSubTitle.value.innerText=`VI`;
                 worksPageTitle.value.innerText=`HomeTrust`;
@@ -177,9 +189,7 @@ onMounted(() =>{
                 // console.log('worksPageMainScroll1onEnterBack')
                 worksindex_GoAhandBolean.value=true;
                 worksindex_HomeTrustBolean.value=false;
-                worksPageintroContent.value.innerText=
-                `setes車黑坡怎汁錯「至借土水而娘苦」相固貝法由造了王子食即兔國收綠嗎是封兆,
-                坐像男貫叫勿；問跑幼牛貝吧姐。連得者正木新司好植：向向即世活。`
+                worksPageintroContent.value.innerText=worksPageMainText.GoAhand
                 worksPageSubTitle.value.innerText=`UI/UX`;
                 worksPageTitle.value.innerText=`GoAhand`;
                
@@ -206,9 +216,7 @@ onMounted(() =>{
                     worksindex_HomeTrustBolean.value=false;
                     worksindex_MapleBolean.value=true;
 
-                    worksPageintroContent.value.innerText=
-                    `333333車黑坡怎汁錯「至借土水而娘苦」相固貝法由造了王子食即兔國收綠嗎是封兆,
-                    坐像男貫叫勿；問跑幼牛貝吧姐。連得者正木新司好植：向向即世活。`
+                    worksPageintroContent.value.innerText=worksPageMainText.Maple
 
                     worksPageSubTitle.value.innerText=`VI`;
                     worksPageTitle.value.innerText=`楓茶米`;
@@ -223,9 +231,7 @@ onMounted(() =>{
                     worksindex_HomeTrustBolean.value=true;
                     worksindex_MapleBolean.value=false;
 
-                    worksPageintroContent.value.innerText=
-                    `e-2-2s車黑坡怎汁錯「至借土水而娘苦」相固貝法由造了王子食即兔國收綠嗎是封兆,
-                    坐像男貫叫勿；問跑幼牛貝吧姐。連得者正木新司好植：向向即世活。`
+                    worksPageintroContent.value.innerText=worksPageMainText.HomeTrust
 
                     worksPageSubTitle.value.innerText=`VI`;
                     worksPageTitle.value.innerText=`HomeTrust`;
@@ -243,9 +249,7 @@ onMounted(() =>{
                     worksindex_MapleBolean.value=false;
                     worksindex_PhotoBolean.value=true;
 
-                    worksPageintroContent.value.innerText=
-                    `44444車黑坡怎汁錯「至借土水而娘苦」相固貝法由造了王子食即兔國收綠嗎是封兆,
-                    坐像男貫叫勿；問跑幼牛貝吧姐。連得者正木新司好植：向向即世活。`
+                    worksPageintroContent.value.innerText=worksPageMainText.Photo
 
                     worksPageSubTitle.value.innerText=`photo`;
                     worksPageTitle.value.innerText=`Nagi`;
@@ -265,9 +269,7 @@ onMounted(() =>{
                     worksindex_MapleBolean.value=true;
                     worksindex_PhotoBolean.value=false;
 
-                    worksPageintroContent.value.innerText=
-                    `333333車黑坡怎汁錯「至借土水而娘苦」相固貝法由造了王子食即兔國收綠嗎是封兆,
-                    坐像男貫叫勿；問跑幼牛貝吧姐。連得者正木新司好植：向向即世活。`
+                    worksPageintroContent.value.innerText=worksPageMainText.Maple
 
                     worksPageSubTitle.value.innerText=`VI`;
                     worksPageTitle.value.innerText=`楓茶米`;
@@ -286,9 +288,7 @@ onMounted(() =>{
                     worksindex_PhotoBolean.value=false;
                     worksindex_OtherBolean.value=true;
 
-                    worksPageintroContent.value.innerText=
-                    `5555555車黑坡怎汁錯「至借土水而娘苦」相固貝法由造了王子食即兔國收綠嗎是封兆,
-                    坐像男貫叫勿；問跑幼牛貝吧姐。連得者正木新司好植：向向即世活。`
+                    worksPageintroContent.value.innerText=worksPageMainText.other
 
                     worksPageSubTitle.value.innerText=`Design`;
                     worksPageTitle.value.innerText=`other`;
@@ -308,9 +308,7 @@ onMounted(() =>{
                     worksindex_PhotoBolean.value=true;
                     worksindex_OtherBolean.value=false;
 
-                    worksPageintroContent.value.innerText=
-                    `44444車黑坡怎汁錯「至借土水而娘苦」相固貝法由造了王子食即兔國收綠嗎是封兆,
-                    坐像男貫叫勿；問跑幼牛貝吧姐。連得者正木新司好植：向向即世活。`
+                    worksPageintroContent.value.innerText=worksPageMainText.Photo
 
                     worksPageSubTitle.value.innerText=`photo`;
                     worksPageTitle.value.innerText=`Nagi`;
@@ -397,8 +395,9 @@ onMounted(() =>{
             </div>
             <div class="worksPageintroBox">
                 <a :class="['worksPageintroTitle',{changeColor:changeColor}]" ref="worksPageintroTitle" href="#" >簡介</a>
-                <a :class="['worksPageintroContent',{changeColor:changeColor}]" ref="worksPageintroContent" href="#">setes車黑坡怎汁錯「至借土水而娘苦」相固貝法由造了王子食即兔國收綠嗎是封兆：
-                                坐像男貫叫勿；問跑幼牛貝吧姐。連得者正木新司好植：向向即世活。</a>
+                <a :class="['worksPageintroContent',{changeColor:changeColor}]" ref="worksPageintroContent" href="#">
+                    一個不論是身心障礙者或是普通人都可以拿來規劃無障礙旅行計畫及日常使用的一個app，
+                                可以根據你選擇的地點給予使用者無障礙路線導航與盲人輔助導航的需求。</a>
             </div>
             <div class="worksPageTitleBox">
                 <p :class="['worksPageSubTitle',{changeColor:changeColor}]" ref="worksPageSubTitle">UI/UX</p>

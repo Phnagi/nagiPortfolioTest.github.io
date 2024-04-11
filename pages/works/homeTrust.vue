@@ -1,4 +1,7 @@
 <script setup>
+import { gsap } from "gsap";   
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 </script>
 
 <template>
@@ -16,14 +19,13 @@
             <div class="workschildTextFlexBox">
             <div class="workschildTextBox">
                 <p class="worksChildContentText">
-                車黑坡怎汁錯「至借土水而娘苦」相固貝法由造了王子食即兔國收綠嗎是封兆：
-                坐像男貫叫勿；問跑幼牛貝吧姐。連得者正木新司好植：向向即世活。
-                歌片毛犬平牠讀光門世？拍拍在科星實燈室貝說笑旁。</p>
+                    嘉信驗屋，致力於提供全面的房屋檢測服務，為客戶提供可靠、準確且專業的房屋檢測服務
+                    ，幫助他們了解房屋的真實狀況，保護他們的投資和利益。</p>
                 <div class="worksChildTitleBox">
                     <div class="worksChildTitleEnBox">
                         <p class="workschildTitle">HomeTrust</p>
                         <p class="workschildSubTitle">UI/UX</p>
-                        <a class="worksChildptototype" href="#">Links</a>
+                        <a class="worksChildptototype" href="https://drive.google.com/drive/folders/15-7rIGXhgz4JXzUpRuv51CL9zu74Ro7w?usp=sharing">Link</a>
                     </div>
                     <div class="worksChildTitleChiBox">
                         <p class="workschildTitleChi"></p>
@@ -65,9 +67,9 @@
             <div class="workschildTextFlexBox">
             <div class="workschildTextBox">
                 <p class="worksChildContentText">
-                車黑坡怎汁錯「至借土水而娘苦」相固貝法由造了王子食即兔國收綠嗎是封兆：
-                坐像男貫叫勿；問跑幼牛貝吧姐。連得者正木新司好植：向向即世活。
-                歌片毛犬平牠讀光門世？拍拍在科星實燈室貝說笑旁。</p>
+                    LOGO為「信」這個字變換而成，標誌象徵著本公司是值得信任，
+                    能放心的把屋子交給本公司來驗屋。在這個「信」中包含了房屋、家人及門，表達出了家的意思，且家與嘉為諧音，
+                    嘉又有嘉獎的意思，因此本公司的名稱為”嘉信”。</p>
                 <div class="worksChildTitleBox">
                     <div class="worksChildTitleEnBox">
                         <p class="workschildTitle"></p>
@@ -133,9 +135,7 @@
             <div class="workschildTextFlexBox">
             <div class="workschildTextBox">
                 <p class="worksChildContentText">
-                車黑坡怎汁錯「至借土水而娘苦」相固貝法由造了王子食即兔國收綠嗎是封兆：
-                坐像男貫叫勿；問跑幼牛貝吧姐。連得者正木新司好植：向向即世活。
-                歌片毛犬平牠讀光門世？拍拍在科星實燈室貝說笑旁。</p>
+                顏色以藍色為主，目的是給予可人一種穩重、成熟等感覺，且在公司運行上能夠順風順水、風平浪靜、順順利利。</p>
                 <div class="worksChildTitleBox">
                     <div class="worksChildTitleEnBox">
                         <p class="workschildTitle"></p>
@@ -179,9 +179,7 @@
             <div class="workschildTextFlexBox">
             <div class="workschildTextBox">
                 <p class="worksChildContentText">
-                車黑坡怎汁錯「至借土水而娘苦」相固貝法由造了王子食即兔國收綠嗎是封兆：
-                坐像男貫叫勿；問跑幼牛貝吧姐。連得者正木新司好植：向向即世活。
-                歌片毛犬平牠讀光門世？拍拍在科星實燈室貝說笑旁。</p>
+                在字體上，不論是中文或是英文都選用開源字體。</p>
                 <div class="worksChildTitleBox">
                     <div class="worksChildTitleEnBox">
                         <p class="workschildTitle"></p>
@@ -218,9 +216,7 @@
             <div class="workschildTextFlexBox">
             <div class="workschildTextBox">
                 <p class="worksChildContentText">
-                車黑坡怎汁錯「至借土水而娘苦」相固貝法由造了王子食即兔國收綠嗎是封兆：
-                坐像男貫叫勿；問跑幼牛貝吧姐。連得者正木新司好植：向向即世活。
-                歌片毛犬平牠讀光門世？拍拍在科星實燈室貝說笑旁。</p>
+                當logo在深色的背景時以全白方式表示，淺色背景時採用正常的配色，特殊情況可改採全黑表示</p>
                 <div class="worksChildTitleBox">
                     <div class="worksChildTitleEnBox">
                         <p class="workschildTitle"></p>
@@ -244,7 +240,7 @@
             </div>
         </template>
     </WorksChildImgBox>
-    <WorksChildTextBox>
+    <!-- <WorksChildTextBox>
         <template #workschildTextSlot>
             <div class="workschildTextFlexBox">
             <div class="workschildTextBox">
@@ -267,7 +263,7 @@
             </div>
         </div>
         </template>
-    </WorksChildTextBox>
+    </WorksChildTextBox> -->
     <WorksChildImgBox>
         <template #worksChildImgSlot>
             <div class="worksChildViedoBox">
@@ -280,9 +276,9 @@
             <div class="workschildTextFlexBox">
             <div class="workschildTextBox">
                 <p class="worksChildContentText">
-                車黑坡怎汁錯「至借土水而娘苦」相固貝法由造了王子食即兔國收綠嗎是封兆：
-                坐像男貫叫勿；問跑幼牛貝吧姐。連得者正木新司好植：向向即世活。
-                歌片毛犬平牠讀光門世？拍拍在科星實燈室貝說笑旁。</p>
+                    整體設計風格為極簡、簡約，會有許多的留白，整體給人的感覺為簡單、乾淨
+                    ，版面盡量不要太過雜亂。可利用編排不同的字體大小來設計，
+                    或是利用留白給人舒適的閱讀。</p>
                 <div class="worksChildTitleBox">
                     <div class="worksChildTitleEnBox">
                         <p class="workschildTitle"></p>
@@ -326,9 +322,8 @@
             <div class="workschildTextFlexBox">
             <div class="workschildTextBox">
                 <p class="worksChildContentText">
-                車黑坡怎汁錯「至借土水而娘苦」相固貝法由造了王子食即兔國收綠嗎是封兆：
-                坐像男貫叫勿；問跑幼牛貝吧姐。連得者正木新司好植：向向即世活。
-                歌片毛犬平牠讀光門世？拍拍在科星實燈室貝說笑旁。</p>
+                分別有五個簡約的圖形，分別為logo的簡約版、房屋、工具、家人、門等，
+                在設計時可以運用這些圖形。</p>
                 <div class="worksChildTitleBox">
                     <div class="worksChildTitleEnBox">
                         <p class="workschildTitle"></p>

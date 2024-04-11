@@ -62,10 +62,10 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin";
         <MainworkTwo >
             <template #MainworkTwo>
                 <div class="MainWork">
-                    <a href="#" class="MainWorkVideoBox">
+                    <NuxtLink to="/works/goAhand" class="MainWorkVideoBox">
                         <p class="MainWorkVideoMore">more</p>
                         <video src="@/assets/video/goahand_1.mp4" autoplay muted loop></video>
-                    </a>
+                    </NuxtLink>
 
                     <a  class="MainWorkContent">
                         <div class="MainworkTitleBox">
@@ -73,10 +73,11 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin";
                             <p class="MainworkTitleSub">UI/UX video</p>
                         </div>
                         <div class="MainworkConceptBox">
-                            <p class="MainworkConcept">概念</p>
-                            <p class="MainworkConceptContent">車黑坡怎汁錯「至借土水而娘苦」相固貝法由造了王子食即兔國收綠嗎是封兆：
-                                坐像男貫叫勿；問跑幼牛貝吧姐。連得者正木新司好植：向向即世活。
-                                歌片毛犬平牠讀光門世？拍拍在科星實燈室貝說笑旁。
+                            <p class="MainworkConcept">簡介</p>
+                            <p class="MainworkConceptContent">
+                                一個不論是身心障礙者或是普通人都可以拿來規劃無障礙旅行計畫及日常使用的一個app，
+                                可以根據你選擇的地點給予使用者無障礙路線導航與盲人輔助導航的需求。
+
                             </p>
                         </div>
                     </a>
@@ -87,17 +88,17 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin";
             <template #SecontWork >
                 <div class="sec">
                     <div class="secWork" ref="secWork1">
-                        <a href="#" class="secWorkVideoBox" data-speed="1.5">
+                        <NuxtLink to="/works/homeTrust" class="secWorkVideoBox" data-speed="1.5">
                             <img src="@/assets/images/VI/HomeTrust/VI.jpg" alt="">
-                        </a>
-                        <a href="#" class="secWorkContentBox" data-speed="1.5">
+                        </NuxtLink>
+                        <NuxtLink to="/works/homeTrust" class="secWorkContentBox" data-speed="1.5">
                             <p class="secWorkSubTitle">VI</p>
                             <p class="secWorkTitle">HomeTrust</p>
 
                             <div class="secWorkMore">更多</div>
 
 
-                        </a>
+                        </NuxtLink>
                     </div>
                 </div>
             </template>
@@ -106,17 +107,17 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin";
             <template #SecontWork>
                 <div class="sec">
                 <div class="secWork" ref="secWork2">
-                    <a href="#" class="secWorkVideoBox" data-speed="1.5">
-                        <img src="@/assets/images/VI/HomeTrust/VI.jpg" alt="">
-                    </a>
-                    <a href="#" class="secWorkContentBox" data-speed="1.5">
+                    <NuxtLink to="/works/mapleTeaRice" class="secWorkVideoBox" data-speed="1.5">
+                        <img src="@/assets/images/VI/Maple/VI2.jpg" alt="">
+                    </NuxtLink>
+                    <NuxtLink to="/works/mapleTeaRice" class="secWorkContentBox" data-speed="1.5">
                         <p class="secWorkSubTitle">VI</p>
-                        <p class="secWorkTitle">HomeTrust</p>
+                        <p class="secWorkTitle" style="font-family: Noto Serif TC">楓茶米</p>
 
                         <div class="secWorkMore">更多</div>
 
 
-                    </a>
+                    </NuxtLink>
                 </div>
         </div>
             </template>

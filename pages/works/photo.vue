@@ -29,6 +29,9 @@ import img27 from "@/assets/images/photo/27.jpg";
 import img28 from "@/assets/images/photo/28.jpg";
 import img29 from "@/assets/images/photo/29.jpg";
 import img30 from "@/assets/images/photo/30.jpg";
+import { gsap } from "gsap";   
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 //direction:true=v
 // import {onBeforeMonut} from 'vue'
 
