@@ -13,15 +13,16 @@ let worksPageMainScroll1 = ref(null)
 let worksPageMainScroll2 = ref(null)
 let worksPageMainScroll3 = ref(null)
 let worksPageMainScroll4 = ref(null)
+let worksPageMainScroll5 = ref(null)
 
 //文字
 let worksPageMainText=reactive({
     GoAhand:'一個不論是身心障礙者或是普通人都可以拿來規劃無障礙旅行計畫及日常使用的一個app，可以根據你選擇的地點給予使用者無障礙路線導航與盲人輔助導航的需求。',
     HomeTrust:"嘉信驗屋，致力於提供全面的房屋檢測服務，為客戶提供可靠、準確且專業的房屋檢測服務，幫助他們了解房屋的真實狀況，保護他們的投資和利益。",
-    Drop:'',
+    Drop:'一間以白領上班族為主打的外帶咖啡店，標語為“Coffee on the move, Drop Coffee groove.“「隨處咖啡，跳動咖啡節奏」。',
     Maple:"楓茶米休閒農業區為一個封閉的里山環境，保留農田山林，溪谷終年有水，谷地以水稻種植為主，山嶺間茶園遍布，還有網室蔬菜及花卉苗木培育等，隨處可見豐富多樣的農村自然生態樣貌。",
-    Photo:"平時的我喜歡在休閒或通勤時間，在街上街頭攝影，我喜歡拍攝光、生活的人們、及街景等，擅長運用強烈的光影構圖",
-    other:'除了以上的設計及拍攝外，還有一些零散的作品'
+    Photo:"平時的我喜歡在休閒或通勤時間，在街上街頭攝影，我喜歡拍攝光、生活的人們、及街景等，擅長運用強烈的光影構圖。",
+    other:'除了以上的設計及拍攝外，還有一些零散的作品。'
                                 
     })
 
@@ -37,12 +38,14 @@ let worksPageMainText=reactive({
     // 選取worksPageindex
     let worksPageindexBoxGoAhand = ref(null);
     let worksPageindexBoxHomeTrust = ref(null);
+    let worksPageindexBoxDrop = ref(null);
     let worksPageindexBoxMaple = ref(null);
     let worksPageindexBoxPhoto = ref(null);
     let worksPageindexBoxOther = ref(null);
     //控制
     let worksindex_GoAhandBolean = ref(true);
     let worksindex_HomeTrustBolean = ref(false);
+    let worksindex_Drop = ref(false);
     let worksindex_MapleBolean = ref(false);
     let worksindex_PhotoBolean = ref(false);
     let worksindex_OtherBolean = ref(false);
@@ -95,7 +98,7 @@ onMounted(() =>{
             // opacity:1,
         })
 
-        //第二條timerLine 楓茶米
+        //第二條timerLine Drop
         let tl2 = gsap.timeline({
             scrollTrigger:{
                 trigger:worksPageMainScroll2.value,
@@ -117,7 +120,7 @@ onMounted(() =>{
             // opacity:1,
         })
 
-        //第三條timerLine 照片
+        //第三條timerLine 風茶米
         let tl3 = gsap.timeline({
             scrollTrigger:{
                 trigger:worksPageMainScroll3.value,
@@ -152,6 +155,27 @@ onMounted(() =>{
             }
         });
         tl4.to(worksPageMainScroll4.value,{
+            // xPercent:60,
+            // opacity:0,
+        },{
+        
+            // xPercent:0,
+            // opacity:1,
+        })
+        //第五條timerLine 其他
+        let tl5 = gsap.timeline({
+            scrollTrigger:{
+                trigger:worksPageMainScroll5.value,
+                start:'top top',
+                end:'top 80%',
+                scrub:true,
+                // markers:true,
+                onEnter: worksPageMainScroll_fiveOnEnter,
+                onEnterBack: worksPageMainScroll_fiveOnEnterBack,
+
+            }
+        });
+        tl5.to(worksPageMainScroll4.value,{
             // xPercent:60,
             // opacity:0,
         },{
@@ -211,17 +235,17 @@ onMounted(() =>{
 
         //進入第三頁的DOM改變function
             //進入
-                function worksPageMainScroll_SecOnEnter(){
+            function worksPageMainScroll_SecOnEnter(){
                     worksImg2 = document.querySelector(".worksImg");
                     worksindex_HomeTrustBolean.value=false;
-                    worksindex_MapleBolean.value=true;
+                    worksindex_Drop.value=true;
 
-                    worksPageintroContent.value.innerText=worksPageMainText.Maple
+                    worksPageintroContent.value.innerText=worksPageMainText.Drop
 
-                    worksPageSubTitle.value.innerText=`VI`;
-                    worksPageTitle.value.innerText=`楓茶米`;
-                    worksPageTitle.value.style.fontFamily ="Noto Serif TC";
-                    worksPageTitle.value.style.letterSpacing= "8.2px";
+                    worksPageSubTitle.value.innerText=`Design`;
+                    worksPageTitle.value.innerText=`Drop Coffee`;
+                    worksPageTitle.value.style.fontFamily ="Noto Sans TC";
+                    worksPageTitle.value.style.letterSpacing= "1.6px";
 
                     // worksImg2.src =MainImg.Maple;
                 }
@@ -229,7 +253,7 @@ onMounted(() =>{
                 function worksPageMainScroll_SecOnEnterBack(){
                     worksImg2 = document.querySelector(".worksImg");
                     worksindex_HomeTrustBolean.value=true;
-                    worksindex_MapleBolean.value=false;
+                    worksindex_Drop.value=false;
 
                     worksPageintroContent.value.innerText=worksPageMainText.HomeTrust
 
@@ -244,7 +268,40 @@ onMounted(() =>{
 
         //進入第四頁的DOM改變function
             //進入
-            function worksPageMainScroll_ThirdOnEnter(){
+                function worksPageMainScroll_ThirdOnEnter(){
+                    worksImg2 = document.querySelector(".worksImg");
+                    worksindex_Drop.value=false;
+                    worksindex_MapleBolean.value=true;
+
+                    worksPageintroContent.value.innerText=worksPageMainText.Maple
+
+                    worksPageSubTitle.value.innerText=`VI`;
+                    worksPageTitle.value.innerText=`楓茶米`;
+                    worksPageTitle.value.style.fontFamily ="Noto Serif TC";
+                    worksPageTitle.value.style.letterSpacing= "8.2px";
+
+                    // worksImg2.src =MainImg.Maple;
+                }
+            //離開    
+                function worksPageMainScroll_ThirdOnEnterBack(){
+                    worksImg2 = document.querySelector(".worksImg");
+                    worksindex_Drop.value=true;
+                    worksindex_MapleBolean.value=false;
+
+                    worksPageintroContent.value.innerText=worksPageMainText.Drop
+
+                    worksPageSubTitle.value.innerText=`Design`;
+                    worksPageTitle.value.innerText=`Drop Coffee`;
+                    worksPageTitle.value.style.fontFamily ="Noto Sans TC";
+                    worksPageTitle.value.style.letterSpacing= "1.6px";
+
+                    // worksImg2.src =MainImg.HomeTrust;
+                }
+
+
+        //進入第五頁的DOM改變function
+            //進入
+            function worksPageMainScroll_fourthOnEnter(){
                     worksImg2 = document.querySelector(".worksImg");
                     worksindex_MapleBolean.value=false;
                     worksindex_PhotoBolean.value=true;
@@ -264,7 +321,7 @@ onMounted(() =>{
 
                 }
             //離開    
-                function worksPageMainScroll_ThirdOnEnterBack(){
+                function worksPageMainScroll_fourthOnEnterBack(){
                     worksImg2 = document.querySelector(".worksImg");
                     worksindex_MapleBolean.value=true;
                     worksindex_PhotoBolean.value=false;
@@ -281,9 +338,9 @@ onMounted(() =>{
                     // worksImg2.src =MainImg.Maple;
                 }
 
-            //進入第五頁的DOM改變function
+        //進入第六頁的DOM改變function
             //進入
-            function worksPageMainScroll_fourthOnEnter(){
+            function worksPageMainScroll_fiveOnEnter(){
                     worksImg2 = document.querySelector(".worksImg");
                     worksindex_PhotoBolean.value=false;
                     worksindex_OtherBolean.value=true;
@@ -303,7 +360,7 @@ onMounted(() =>{
 
                 }
             //離開    
-                function worksPageMainScroll_fourthOnEnterBack(){
+                function worksPageMainScroll_fiveOnEnterBack(){
                     worksImg2 = document.querySelector(".worksImg");
                     worksindex_PhotoBolean.value=true;
                     worksindex_OtherBolean.value=false;
@@ -322,6 +379,7 @@ onMounted(() =>{
 
         //index按鈕互動
         worksPageindexBoxGoAhand.value.addEventListener("click",()=> {
+            console.log("worksPageindexBoxGoAhand")
             gsap.to(window,
                 {duration: 0.5, 
                 scrollTo:{y:".worksPageMainScroll0" , 
@@ -337,7 +395,7 @@ onMounted(() =>{
             
             });
         })
-        worksPageindexBoxMaple.value.addEventListener("click",()=> {
+        worksPageindexBoxDrop.value.addEventListener("click",()=> {
             gsap.to(window,
                 {duration: 0.5, 
                 scrollTo:{y:".worksPageMainScroll2", 
@@ -345,7 +403,7 @@ onMounted(() =>{
             
             });
         })
-        worksPageindexBoxPhoto.value.addEventListener("click",()=> {
+        worksPageindexBoxMaple.value.addEventListener("click",()=> {
             gsap.to(window,
                 {duration: 0.5, 
                 scrollTo:{y:".worksPageMainScroll3", 
@@ -353,10 +411,18 @@ onMounted(() =>{
             
             });
         })
-        worksPageindexBoxOther.value.addEventListener("click",()=> {
+        worksPageindexBoxPhoto.value.addEventListener("click",()=> {
             gsap.to(window,
                 {duration: 0.5, 
                 scrollTo:{y:".worksPageMainScroll4", 
+                offsetY:-1}
+            
+            });
+        })
+        worksPageindexBoxOther.value.addEventListener("click",()=> {
+            gsap.to(window,
+                {duration: 0.5, 
+                scrollTo:{y:".worksPageMainScroll5", 
                 offsetY:-1}
             
             });
@@ -376,22 +442,26 @@ onMounted(() =>{
         <NuxtLink to="/works/homeTrust"  :class="['worksImgBox','worksImgBox1',{workPageOpacity:worksindex_HomeTrustBolean}]" ref="worksImgBox1"  >
             <img id="homeTrustImg" class="worksImg" ref="worksImg" src="@/assets/images/VI/HomeTrust/VI.jpg" alt="">
         </NuxtLink>
+        <NuxtLink to="/works/dropCoffee"   :class="['worksImgBox','worksImgBox2',{workPageOpacity:worksindex_Drop}]" ref="worksImgBox2" >
+            <img id="DropImg" class="worksImg" ref="worksImg" src="@/assets/images/VI/Drop/Drop1.jpg" alt="">
+        </NuxtLink>
         <NuxtLink to="/works/mapleTeaRice"   :class="['worksImgBox','worksImgBox2',{workPageOpacity:worksindex_MapleBolean}]" ref="worksImgBox2" >
-            <img id="mapleImg" class="worksImg" ref="worksImg" src="@/assets/images/VI/Maple/VI2.jpg" alt="">
+            <img id="mapleImg" class="worksImg" ref="worksImg" src="@/assets/images/VI/Maple/VI1.png" alt="">
         </NuxtLink>
         <NuxtLink to="/works/photo"   :class="['worksImgBox','worksImgBox3',{workPageOpacity:worksindex_PhotoBolean}]" ref="worksImgBox3"  >
             <img id="photoImg" class="worksImg" ref="worksImg" src="@/assets/images/photo/first.jpg" alt="">
         </NuxtLink>
         <NuxtLink to="/works/other"   :class="['worksImgBox','worksImgBox4',{workPageOpacity:worksindex_OtherBolean}]" ref="worksImgBox4">
-            <img id="otherImg" class="worksImg" ref="worksImg" src="@/assets/images/VI/HomeTrust/VI.jpg" alt="">
+            <img id="otherImg" class="worksImg" ref="worksImg" src="@/assets/images/other/web1.png" alt="">
         </NuxtLink>
         <div class="worksPageTextBox">
             <div class="worksPageindexBox">
                 <p id="worksPageindex1" :class="{worksPageindexAnime:worksindex_GoAhandBolean,changeSubColor:changeColor}" ref="worksPageindexBoxGoAhand">01.GoAhand</p>
                 <p id="worksPageindex2" :class="{worksPageindexAnime:worksindex_HomeTrustBolean,changeSubColor:changeColor}" ref="worksPageindexBoxHomeTrust">02.HomeTrust</p>
-                <p id="worksPageindex3" :class="{worksPageindexAnime:worksindex_MapleBolean,changeSubColor:changeColor}" ref="worksPageindexBoxMaple">03.楓茶米</p>
-                <p id="worksPageindex4" :class="{worksPageindexAnime:worksindex_PhotoBolean ,changeColor:changeColor}" ref="worksPageindexBoxPhoto">04.Photo</p>
-                <p id="worksPageindex4" :class="{worksPageindexAnime:worksindex_OtherBolean,changeSubColor:changeColor}" ref="worksPageindexBoxOther">05.other</p>
+                <p id="worksPageindex3" :class="{worksPageindexAnime:worksindex_Drop,changeSubColor:changeColor}" ref="worksPageindexBoxDrop">03.DropCoffe</p>
+                <p id="worksPageindex4" :class="{worksPageindexAnime:worksindex_MapleBolean,changeSubColor:changeColor}" ref="worksPageindexBoxMaple">04.楓茶米</p>
+                <p id="worksPageindex5" :class="{worksPageindexAnime:worksindex_PhotoBolean ,changeColor:changeColor}" ref="worksPageindexBoxPhoto">05.Photo</p>
+                <p id="worksPageindex6" :class="{worksPageindexAnime:worksindex_OtherBolean,changeSubColor:changeColor}" ref="worksPageindexBoxOther">06.other</p>
             </div>
             <div class="worksPageintroBox">
                 <a :class="['worksPageintroTitle',{changeColor:changeColor}]" ref="worksPageintroTitle" href="#" >簡介</a>
@@ -411,6 +481,7 @@ onMounted(() =>{
     <div class="worksPageMainScroll2 worksPageMainScroll" ref="worksPageMainScroll2"></div>
     <div class="worksPageMainScroll3 worksPageMainScroll" ref="worksPageMainScroll3"></div>
     <div class="worksPageMainScroll4 worksPageMainScroll" ref="worksPageMainScroll4"></div>
+    <div class="worksPageMainScroll5 worksPageMainScroll" ref="worksPageMainScroll5"></div>
   </div>
 
 </template>
@@ -430,24 +501,29 @@ body::-webkit-scrollbar {
     content: '';
     position: absolute;
     height: 1px;
-    top: 40dvh;
+    top: 60dvh;
 }
 
 .worksPageMainScroll2{
     height: 1px;
     position: absolute;
-    top: 80dvh;
+    top: 120dvh;
 }
 
 .worksPageMainScroll3{
     height: 1px;
     position: absolute;
-    top: 120dvh;
+    top: 180dvh;
 }
 .worksPageMainScroll4{
     height: 1px;
     position: absolute;
-    top: 160dvh;
+    top: 240dvh;
+}
+.worksPageMainScroll5{
+    height: 1px;
+    position: absolute;
+    top: 300dvh;
 }
 
 
@@ -475,7 +551,7 @@ body::-webkit-scrollbar {
     transition: 0.5s ease-in-out;
 }
 .worksPageMainBox{
-    height: 300dvh;
+    height: 500dvh;
     width: 100%;
     .worksPageMain{
         height: 100dvh;
@@ -487,6 +563,8 @@ body::-webkit-scrollbar {
             position: absolute;
             height: 100%;
             width: 100%;
+            display: flex;
+            justify-content: flex-start;
 
             transition-property:index,opacity;
             transition-delay: 0s,0.1s;
@@ -514,12 +592,25 @@ body::-webkit-scrollbar {
                 @media(max-width: 992px){
                     width: auto;
                     height:100dvh;
+                    left: -0%;
                 }
                 @media(max-width: 768px){
                     left: -10%;
                 }
                 @media(max-width: 576px){
-                    left: -60%;
+                    left: -30%;
+                }
+                @media(max-width: 499px){
+                    left: -55%;
+                }
+                @media(max-width: 376px){
+                    left: -40%;
+                }
+                @media(max-width: 360px){
+                    left: -50%;
+                }
+                @media(max-width: 300px){
+                    left: -55%;
                 }
             }
         }
@@ -528,6 +619,10 @@ body::-webkit-scrollbar {
             height: 100%;
             width: 100%;
             overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #F5F5F5;
             /* background-image: url("@/assets/images/VI/VI1.jpg"); */
             /* transition-property:top,transform;
                 transition-delay: 0.5s,0s;
@@ -558,46 +653,149 @@ body::-webkit-scrollbar {
                 height:100dvh;
                 }
                 @media(max-width: 768px){
-                    left: -10%;
+                    left: 10%;
                 }
                 @media(max-width: 576px){
-                    left: -80%;
+                    left: 10%;
                 }
+                @media(max-width:499px){
+                    /* left: -360px; */
+                    left: -85dvw;
+                }
+                @media(max-width: 376px){
+                    left: -60dvw;
+                }
+                @media(max-width: 360px){
+                    left: -80dvw;
+                }
+                @media(max-width: 300px){
+                    left: -250px;
+                }
+            }
+            #DropImg{
+                @media(max-width: 992px){
+                width: auto;
+                height:100dvh;
+                left: 0%;
+                }
+                @media(max-width: 768px){
+                    left: 15%;
+                }
+                @media(max-width: 576px){
+                    left: 15%;
+                }
+                @media(max-width: 499px){
+                    left: 15%;
+                }
+                @media(max-width: 376px){
+                    left: 15dvw;
+                }
+                @media(max-width: 360px){
+                    left: 15%;
+                }
+                @media(max-width:300px){
+                    left: 25%;
+                }
+
             }
             #mapleImg{
                 left: 0%;
 
-            width: 100%;
-            height:100dvh;
-            @media(max-width: 992px){
                 width: auto;
-                height:100dvh;
-            }
-            @media(max-width: 768px){
-                left: -10%;
-            }
-            @media(max-width: 576px){
-                left: -90%;
-            }
+                height:50dvh;
+                @media(max-width: 992px){
+                    width: auto;
+                    height:50dvh;
+                    left: 10%;
+                }
+                @media(max-width: 768px){
+                    left: 15%;
+                }
+                @media(max-width: 576px){
+                    left: 15%;
+                }
+                
+                @media(max-width: 499px){
+                    left: 15%;
+                }
+                @media(max-width: 376px){
+                    left: 15dvw;
+                }
+                @media(max-width: 360px){
+                    left: 15%;
+                }
+                @media(max-width:300px){
+                    left: 20%;
+                    height: 35dvh;
+                }
             }
             #photoImg{
                 left: 0%;
 
                 width: 100%;
                 height:100dvh;
-                @media(max-width: 992px){
+                @media(max-width: 1100px){
                     width: auto;
-                    height:100dvh;
+                    height:120dvh;
+                    left: 10%;
+  
                 }
+                @media(max-width: 992px){
+                    height:150dvh;
+                    top: 10%;
+                    left: 40%;
+                }
+
                 @media(max-width: 768px){
-                    left: -10%;
+                    left: 55%;
                 }
                 @media(max-width: 576px){
-                    left: -40%;
+                    left: 80%;
+                }
+                @media(max-width: 500px){
+                    left: 80%;
                 }
             }
             #otherImg{
+                left: 10%;
 
+                width: auto;
+                height:700px;
+                @media(max-width: 992px){
+                    width: auto;
+                    height:500px;
+                    left: 15%;
+                }
+                @media(max-width: 768px){
+
+                    height:400px;
+                    left: 15%;
+                }
+                @media(max-width: 620px){
+
+                    height:350px;
+                    left: 15%;
+                }
+                @media(max-width: 576px){
+                    height:300px;
+                    left: 15%;
+                }
+                
+                @media(max-width: 499px){
+                    left: 15%;
+                }
+                @media(max-width: 376px){
+                    height:250px;
+                    left: 15dvw;
+                }
+                @media(max-width: 360px){
+                    height:250px;
+                    left: 15%;
+                }
+                @media(max-width:300px){
+                    left: 20%;
+                    height:150px;
+                }
             }
         }
         .worksImgBox3{
@@ -616,13 +814,19 @@ body::-webkit-scrollbar {
 
             
             .worksPageindexBox{
+                /* position: relative;
+                top: 2%; */
                 width: 100%;
                 height: 20%;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                margin: 0 0 0 7%;
+                /* margin: 3% 0 0 7%; */
+                margin-left: calc(100dvw*0.07);
+                margin-top: 2dvh;
                 cursor: pointer;
+                z-index: 50;
+
                 p{
                     margin: 0;
                     padding: 0;
@@ -636,6 +840,7 @@ body::-webkit-scrollbar {
                     letter-spacing: 0.75px;
                     transform: translateX(0);
                     transition: 0.5s ease-in-out;
+                    
                 }
                 #worksPageindex1{
                     /* color: #000000;
@@ -654,10 +859,11 @@ body::-webkit-scrollbar {
             .worksPageintroBox{
                 width: 100%;
                 height: 60%;
-                margin: 0 0 0 7%;
+                margin-left: calc(100dvw*0.07);
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
+                /* pointer-events: none; */
 
                 a{
                     margin: 0;
@@ -714,15 +920,20 @@ body::-webkit-scrollbar {
                         width:100px ;
                         margin-top: 10px;
                     }
+
+                    @media(max-width:281px){
+                        font-size: 10px;
+                    }
                 }
             }
             .worksPageTitleBox{
                 width: 100%;
                 height: 20%;
-                margin: 0 0 0 7%;
+                margin-left: calc(100dvw*0.07);
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
+                /* pointer-events: none; */
                 p{
                     margin: 0;
                     padding: 0;
