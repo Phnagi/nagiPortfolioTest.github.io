@@ -33,18 +33,18 @@ function submitForm() { //這裡要對應到自己的 javascript 名稱
 
 }
 
-const  submitComments = async()=>{
-    const responseData  = await useFetch('https://docs.google.com/forms/u/0/d/e/1FAIpQLSdYKITEU5RH425OoYsFQ2nrA5FBpWAQVc1wp0W6CbeOJ0fPOg/formResponse', {
-            method: 'post',
-            body: { 
-                    "entry.774436725":name,
-                    "entry.886580561":tel,
-                    "entry.1200253117":email,
-                    "entry.1412886636":other,
-            }
-        })
-        console.log(responseData)
-};
+// const  submitComments = async()=>{
+//     const responseData  = await useFetch('https://docs.google.com/forms/u/0/d/e/1FAIpQLSdYKITEU5RH425OoYsFQ2nrA5FBpWAQVc1wp0W6CbeOJ0fPOg/formResponse', {
+//             method: 'post',
+//             body: { 
+//                     "entry.774436725":name,
+//                     "entry.886580561":tel,
+//                     "entry.1200253117":email,
+//                     "entry.1412886636":other,
+//             }
+//         })
+//         console.log(responseData)
+// };
 
 onMounted(() =>{
      submit.value.addEventListener('click',(e)=>{

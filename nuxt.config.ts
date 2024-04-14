@@ -54,32 +54,32 @@ export default defineNuxtConfig({
 
 
   // modules: [
-  //   '@nuxtjs/axios',
-  //   '@nuxtjs/proxy'
+  //   // '@nuxtjs/axios',
+  //   "@nuxtjs/proxy"
   // ],
   // axios: {
   //   proxy: true
   // },
   // proxy: {
-  //   '/api': {
-  //     target: 'http://localhost:3000/',
+  //   '/': {
+  //     target: 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSdYKITEU5RH425OoYsFQ2nrA5FBpWAQVc1wp0W6CbeOJ0fPOg/formResponse',
   //     pathRewrite: {
   //       '^/api': '/',
   //     }
   //   }
   // }
-  routes: { '/': { prerender: true }, '/*': { cors: true } },
+  // routes: { '/': { prerender: true }, '/*': { cors: true } },
 
-  vite: {
-    server: {
-      proxy: {
-        '/api': {
-          target: 'http://127.0.0.1:3000/',
-          changeOrigin: true
-        }
-      }
-    }
-  }
+  // vite: {
+  //   server: {
+  //     proxy: {
+  //       '/api': {
+  //         target: 'http://127.0.0.1:3000/',
+  //         changeOrigin: true
+  //       }
+  //     }
+  //   }
+  // }
 
   
 })
