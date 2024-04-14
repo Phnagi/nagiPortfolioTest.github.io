@@ -31,6 +31,55 @@ export default defineNuxtConfig({
         { children: 'JavaScript is required' }
       ]
     }
+  },
+  
+  plugins: [
+    { src: "~/plugins/jquery", mode: "client" },
+  ],
+
+  // modules: [
+  //   '@nuxt-alt/proxy',
+  // ],
+  // axios: {
+  //   proxy: true
+  // },
+  // proxy: {
+  //   proxies: {
+  //     '/api/': {
+  //       target: 'http://127.0.0.1:3006',
+  //       changeOrigin: true // 允許cors跨域
+  //     }
+  //   }
+  // }
+
+
+  // modules: [
+  //   '@nuxtjs/axios',
+  //   '@nuxtjs/proxy'
+  // ],
+  // axios: {
+  //   proxy: true
+  // },
+  // proxy: {
+  //   '/api': {
+  //     target: 'http://localhost:3000/',
+  //     pathRewrite: {
+  //       '^/api': '/',
+  //     }
+  //   }
+  // }
+  routes: { '/': { prerender: true }, '/*': { cors: true } },
+
+  vite: {
+    server: {
+      proxy: {
+        '/api': {
+          target: 'http://127.0.0.1:3000/',
+          changeOrigin: true
+        }
+      }
+    }
   }
+
   
 })

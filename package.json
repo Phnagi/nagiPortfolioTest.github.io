@@ -10,9 +10,14 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@nuxt-alt/proxy": "^2.5.8",
+    "@nuxtjs/axios": "^5.13.6",
+    "@nuxtjs/proxy": "^2.1.0",
     "@studio-freight/lenis": "^1.0.39",
     "bootstrap": "^5.3.3",
+    "cors": "^2.8.5",
     "gsap": "^3.12.5",
+    "jquery": "^3.7.1",
     "nuxt": "^3.10.3",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0"

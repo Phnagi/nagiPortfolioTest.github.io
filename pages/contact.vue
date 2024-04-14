@@ -5,7 +5,7 @@
 <template>
     <Header/>
 
-    <ContactMe/>
+    <!-- <ContactMe/> -->
 
     <Footer/>
 </template>
