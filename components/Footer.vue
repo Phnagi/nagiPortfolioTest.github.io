@@ -3,7 +3,15 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 const footer = ref(null);
+// const props = defineProps({
+//     footerReload:{
+//             type:Boolean,
+//             default:false,
+//         },
+//     });
 
+// let useFooterReload = ref(props.footerReload);
+// let emit = defineEmits(['footerRelodFn']);
 onMounted(() => {
         let tl = gsap.timeline({
             scrollTrigger:{
@@ -25,7 +33,16 @@ onMounted(() => {
             opacity:1,
         })
 
-    });
+
+        let timer = setInterval(() => {
+            // tl.play();
+
+            // tl.refresh();
+            // tl.resume();
+        }, 1000);
+});
+
+
 </script>
 
 <template>
@@ -77,7 +94,7 @@ onMounted(() => {
 
 
 
-<style leng="scss" scoped>
+<style leng="scss" >
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+TC&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
 footer{

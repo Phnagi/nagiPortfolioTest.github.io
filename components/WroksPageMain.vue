@@ -24,7 +24,23 @@ let worksPageMainText=reactive({
     Photo:"平時的我喜歡在休閒或通勤時間，在街上街頭攝影，我喜歡拍攝光、生活的人們、及街景等，擅長運用強烈的光影構圖。",
     other:'除了以上的設計及拍攝外，還有一些零散的作品。'
                                 
-    })
+})
+let worksPageMainTitleList = reactive({
+    GoAhand:"GoAhand",
+    HomeTrust:"HomeTrust",
+    Drop:"Drop",
+    Maple:"楓茶米",
+    Photo:"Photo",
+    other:"other",
+});
+let worksPageMainSubTitleList= reactive({
+    GoAhand:"UI/UX",
+    HomeTrust:"VI",
+    Drop:"Design",
+    Maple:"VI",
+    Photo:"Nagi",
+    other:"Design",
+});
 
 ////改變DOM
     //控制影片/照片
@@ -57,16 +73,28 @@ let worksPageMainText=reactive({
     let worksPageTitle = ref(null);
     //換顏色
     let changeColor = ref(false);
+    //字體
+    let changeFont=ref(false);
     //
-    let MainImg = reactive({
-        HomeTrust:'_nuxt/assets/images/VI/VI1.jpg',
-        Maple:'_nuxt/assets/images/VI/VI2.jpg',
-        Photo:'_nuxt/assets/images/photo/2.jpg',
-        Other:'_nuxt/assets/images/VI/VI1.jpg',
+    // let MainImg = reactive({
+    //     HomeTrust:'_nuxt/assets/images/VI/VI1.jpg',
+    //     Maple:'_nuxt/assets/images/VI/VI2.jpg',
+    //     Photo:'_nuxt/assets/images/photo/2.jpg',
+    //     Other:'_nuxt/assets/images/VI/VI1.jpg',
 
     
-    })
+    // })
+    //控制主要文字
+    let mainWorkText=ref('一個不論是身心障礙者或是普通人都可以拿來規劃無障礙旅行計畫及日常使用的一個app，可以根據你選擇的地點給予使用者無障礙路線導航與盲人輔助導航的需求。');
+    let mainWorkTitle=ref('GoAhand');
+    let mainWorkSubTitle=ref('UI/UX');
 //
+// let tl=null;
+// let tl1=null;
+// let tl2=null;
+// let tl3=null;
+// let tl4=null;
+// let tl5=null;
 onMounted(() =>{
 
     let worksImg2 = document.querySelector(".worksImg");
@@ -192,10 +220,14 @@ onMounted(() =>{
                 worksindex_GoAhandBolean.value=false;
                 worksindex_HomeTrustBolean.value=true;
 
-                worksPageintroContent.value.innerText=worksPageMainText.HomeTrust
-                
-                worksPageSubTitle.value.innerText=`VI`;
-                worksPageTitle.value.innerText=`HomeTrust`;
+                // worksPageintroContent.value.innerText=worksPageMainText.HomeTrust
+                mainWorkText.value=worksPageMainText.HomeTrust
+
+                // worksPageSubTitle.value.innerText=`VI`;
+                // worksPageTitle.value.innerText=`HomeTrust`;
+                mainWorkTitle.value=worksPageMainTitleList.HomeTrust;
+                mainWorkSubTitle.value=worksPageMainSubTitleList.HomeTrust;
+
 
                 videoImgControl.value=false;
 
@@ -213,9 +245,12 @@ onMounted(() =>{
                 // console.log('worksPageMainScroll1onEnterBack')
                 worksindex_GoAhandBolean.value=true;
                 worksindex_HomeTrustBolean.value=false;
-                worksPageintroContent.value.innerText=worksPageMainText.GoAhand
-                worksPageSubTitle.value.innerText=`UI/UX`;
-                worksPageTitle.value.innerText=`GoAhand`;
+                // worksPageintroContent.value.innerText=worksPageMainText.GoAhand
+                mainWorkText.value=worksPageMainText.GoAhand;
+                // worksPageSubTitle.value.innerText=`UI/UX`;
+                // worksPageTitle.value.innerText=`GoAhand`;
+                mainWorkTitle.value=worksPageMainTitleList.GoAhand;
+                mainWorkSubTitle.value=worksPageMainSubTitleList.GoAhand;
                
                 videoImgControl.value=true;
                     //相片改變
@@ -240,12 +275,15 @@ onMounted(() =>{
                     worksindex_HomeTrustBolean.value=false;
                     worksindex_Drop.value=true;
 
-                    worksPageintroContent.value.innerText=worksPageMainText.Drop
+                    // worksPageintroContent.value.innerText=worksPageMainText.Drop
+                    mainWorkText.value=worksPageMainText.Drop;
 
-                    worksPageSubTitle.value.innerText=`Design`;
-                    worksPageTitle.value.innerText=`Drop Coffee`;
-                    worksPageTitle.value.style.fontFamily ="Noto Sans TC";
-                    worksPageTitle.value.style.letterSpacing= "1.6px";
+                    // worksPageSubTitle.value.innerText=`Design`;
+                    // worksPageTitle.value.innerText=`Drop Coffee`;
+                    mainWorkTitle.value=worksPageMainTitleList.Drop;
+                    mainWorkSubTitle.value=worksPageMainSubTitleList.Drop;
+                    // worksPageTitle.value.style.fontFamily ="Noto Sans TC";
+                    // worksPageTitle.value.style.letterSpacing= "1.6px";
 
                     // worksImg2.src =MainImg.Maple;
                 }
@@ -255,12 +293,15 @@ onMounted(() =>{
                     worksindex_HomeTrustBolean.value=true;
                     worksindex_Drop.value=false;
 
-                    worksPageintroContent.value.innerText=worksPageMainText.HomeTrust
+                    // worksPageintroContent.value.innerText=worksPageMainText.HomeTrust
+                    mainWorkText.value=worksPageMainText.HomeTrust;
 
-                    worksPageSubTitle.value.innerText=`VI`;
-                    worksPageTitle.value.innerText=`HomeTrust`;
-                    worksPageTitle.value.style.fontFamily ="Noto Sans TC";
-                    worksPageTitle.value.style.letterSpacing= "1.6px";
+                    // worksPageSubTitle.value.innerText=`VI`;
+                    // worksPageTitle.value.innerText=`HomeTrust`;
+                    mainWorkTitle.value=worksPageMainTitleList.HomeTrust;
+                    mainWorkSubTitle.value=worksPageMainSubTitleList.HomeTrust;
+                    // worksPageTitle.value.style.fontFamily ="Noto Sans TC";
+                    // worksPageTitle.value.style.letterSpacing= "1.6px";
 
                     // worksImg2.src =MainImg.HomeTrust;
                 }
@@ -273,12 +314,18 @@ onMounted(() =>{
                     worksindex_Drop.value=false;
                     worksindex_MapleBolean.value=true;
 
-                    worksPageintroContent.value.innerText=worksPageMainText.Maple
+                    // worksPageintroContent.value.innerText=worksPageMainText.Maple
+                    mainWorkText.value=worksPageMainText.Maple;
 
-                    worksPageSubTitle.value.innerText=`VI`;
-                    worksPageTitle.value.innerText=`楓茶米`;
-                    worksPageTitle.value.style.fontFamily ="Noto Serif TC";
-                    worksPageTitle.value.style.letterSpacing= "8.2px";
+                    // worksPageSubTitle.value.innerText=`VI`;
+                    // worksPageTitle.value.innerText=`楓茶米`;
+                    mainWorkTitle.value=worksPageMainTitleList.Maple;
+                    mainWorkSubTitle.value=worksPageMainSubTitleList.Maple;
+
+                    //字體改變
+                    changeFont.value=true;
+                    // worksPageTitle.value.style.fontFamily ="Noto Serif TC";
+                    // worksPageTitle.value.style.letterSpacing= "8.2px";
 
                     // worksImg2.src =MainImg.Maple;
                 }
@@ -288,12 +335,17 @@ onMounted(() =>{
                     worksindex_Drop.value=true;
                     worksindex_MapleBolean.value=false;
 
-                    worksPageintroContent.value.innerText=worksPageMainText.Drop
+                    // worksPageintroContent.value.innerText=worksPageMainText.Drop
+                    mainWorkText.value=worksPageMainText.Drop;
 
-                    worksPageSubTitle.value.innerText=`Design`;
-                    worksPageTitle.value.innerText=`Drop Coffee`;
-                    worksPageTitle.value.style.fontFamily ="Noto Sans TC";
-                    worksPageTitle.value.style.letterSpacing= "1.6px";
+                    // worksPageSubTitle.value.innerText=`Design`;
+                    // worksPageTitle.value.innerText=`Drop Coffee`;
+                    mainWorkTitle.value=worksPageMainTitleList.Drop;
+                    mainWorkSubTitle.value=worksPageMainSubTitleList.Drop;
+                    // worksPageTitle.value.style.fontFamily ="Noto Sans TC";
+                    // worksPageTitle.value.style.letterSpacing= "1.6px";
+                    //字體改變
+                    changeFont.value=false;
 
                     // worksImg2.src =MainImg.HomeTrust;
                 }
@@ -306,12 +358,17 @@ onMounted(() =>{
                     worksindex_MapleBolean.value=false;
                     worksindex_PhotoBolean.value=true;
 
-                    worksPageintroContent.value.innerText=worksPageMainText.Photo
+                    // worksPageintroContent.value.innerText=worksPageMainText.Photo
+                    mainWorkText.value=worksPageMainText.Photo;
 
-                    worksPageSubTitle.value.innerText=`photo`;
-                    worksPageTitle.value.innerText=`Nagi`;
-                    worksPageTitle.value.style.fontFamily ="Noto Sans TC";
-                    worksPageTitle.value.style.letterSpacing= "1.6px";
+                    // worksPageSubTitle.value.innerText=`photo`;
+                    // worksPageTitle.value.innerText=`Nagi`;
+                    mainWorkTitle.value=worksPageMainTitleList.Photo;
+                    mainWorkSubTitle.value=worksPageMainSubTitleList.Photo;
+                    //字體改變
+                    changeFont.value=false;
+                    // worksPageTitle.value.style.fontFamily ="Noto Sans TC";
+                    // worksPageTitle.value.style.letterSpacing= "1.6px";
                         //顏色改變
                     changeColor.value=true;
 
@@ -326,12 +383,17 @@ onMounted(() =>{
                     worksindex_MapleBolean.value=true;
                     worksindex_PhotoBolean.value=false;
 
-                    worksPageintroContent.value.innerText=worksPageMainText.Maple
+                    // worksPageintroContent.value.innerText=worksPageMainText.Maple
+                    mainWorkText.value=worksPageMainText.Maple;
 
-                    worksPageSubTitle.value.innerText=`VI`;
-                    worksPageTitle.value.innerText=`楓茶米`;
-                    worksPageTitle.value.style.fontFamily ="Noto Serif TC";
-                    worksPageTitle.value.style.letterSpacing= "8.2px";
+                    // worksPageSubTitle.value.innerText=`VI`;
+                    // worksPageTitle.value.innerText=`楓茶米`;
+                    mainWorkTitle.value=worksPageMainTitleList.Maple;
+                    mainWorkSubTitle.value=worksPageMainSubTitleList.Maple;
+                    // worksPageTitle.value.style.fontFamily ="Noto Serif TC";
+                    // worksPageTitle.value.style.letterSpacing= "8.2px";
+                    //字體改變
+                    changeFont.value=true;
 
                     changeColor.value=false;
 
@@ -345,10 +407,13 @@ onMounted(() =>{
                     worksindex_PhotoBolean.value=false;
                     worksindex_OtherBolean.value=true;
 
-                    worksPageintroContent.value.innerText=worksPageMainText.other
+                    // worksPageintroContent.value.innerText=worksPageMainText.other
+                    mainWorkText.value=worksPageMainText.other;
 
-                    worksPageSubTitle.value.innerText=`Design`;
-                    worksPageTitle.value.innerText=`other`;
+                    // worksPageSubTitle.value.innerText=`Design`;
+                    // worksPageTitle.value.innerText=`other`;
+                    mainWorkTitle.value=worksPageMainTitleList.other;
+                    mainWorkSubTitle.value=worksPageMainSubTitleList.other;
                     // worksPageTitle.value.style.fontFamily ="Noto Sans TC";
                     // worksPageTitle.value.style.letterSpacing= "1.6px";
                         //顏色改變
@@ -365,10 +430,13 @@ onMounted(() =>{
                     worksindex_PhotoBolean.value=true;
                     worksindex_OtherBolean.value=false;
 
-                    worksPageintroContent.value.innerText=worksPageMainText.Photo
+                    // worksPageintroContent.value.innerText=worksPageMainText.Photo
+                    mainWorkText.value=worksPageMainText.Photo;
 
-                    worksPageSubTitle.value.innerText=`photo`;
-                    worksPageTitle.value.innerText=`Nagi`;
+                    // worksPageSubTitle.value.innerText=`photo`;
+                    // worksPageTitle.value.innerText=`Nagi`;
+                    mainWorkTitle.value=worksPageMainTitleList.Photo;
+                    mainWorkSubTitle.value=worksPageMainSubTitleList.Photo;
                     // worksPageTitle.value.style.fontFamily ="Noto Sans TC";
                     // worksPageTitle.value.style.letterSpacing= "1.6px";
 
@@ -429,6 +497,7 @@ onMounted(() =>{
         })
 });
 
+
 </script>
 
 <template>
@@ -466,12 +535,11 @@ onMounted(() =>{
             <div class="worksPageintroBox">
                 <a :class="['worksPageintroTitle',{changeColor:changeColor}]" ref="worksPageintroTitle" href="#" >簡介</a>
                 <a :class="['worksPageintroContent',{changeColor:changeColor}]" ref="worksPageintroContent" href="#">
-                    一個不論是身心障礙者或是普通人都可以拿來規劃無障礙旅行計畫及日常使用的一個app，
-                                可以根據你選擇的地點給予使用者無障礙路線導航與盲人輔助導航的需求。</a>
+                    {{ mainWorkText }}</a>
             </div>
             <div class="worksPageTitleBox">
-                <p :class="['worksPageSubTitle',{changeColor:changeColor}]" ref="worksPageSubTitle">UI/UX</p>
-                <p :class="['worksPageTitle',{changeColor:changeColor}]" ref="worksPageTitle">GoAhand</p>
+                <p :class="['worksPageSubTitle',{changeColor:changeColor}]" ref="worksPageSubTitle">{{mainWorkSubTitle}}</p>
+                <p :class="['worksPageTitle',{changeColor:changeColor,workMainTextChange:changeFont}]" ref="worksPageTitle">{{mainWorkTitle}}</p>
 
             </div>
         </div>
@@ -493,6 +561,10 @@ body::-webkit-scrollbar {
     display: none;
 }
 
+.workMainTextChange{
+    font-family : Noto Serif TC !important;
+    letter-spacing: 8.2px !important;
+}
 .worksPageMainScroll0{
 
     position: absolute;
@@ -743,7 +815,7 @@ body::-webkit-scrollbar {
                 @media(max-width: 992px){
                     height:150dvh;
                     top: 10%;
-                    left: 40%;
+                    left: 35%;
                 }
 
                 @media(max-width: 768px){
@@ -939,6 +1011,9 @@ body::-webkit-scrollbar {
                     padding: 0;
 
                     transition: 0.5s ease-in-out;
+                }
+                .worksPageTitle{
+                    
                 }
                 p:nth-child(1){
                     color: #000;

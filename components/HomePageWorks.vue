@@ -107,13 +107,13 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin";
             <template #SecontWork>
                 <div class="sec">
                 <div class="secWork" ref="secWork2">
-                    <NuxtLink to="/works/mapleTeaRice" class="secWorkVideoBox" data-speed="1.5">
-                        <img src="@/assets/images/VI/Maple/VI2.jpg" alt="">
+                    <NuxtLink to="/works/dropCoffee" class="secWorkVideoBox" data-speed="1.5">
+                        <img src="@/assets/images/VI/Drop/Drop16.jpg" alt="">
                     </NuxtLink>
-                    <NuxtLink to="/works/mapleTeaRice" class="secWorkContentBox" data-speed="1.5">
-                        <p class="secWorkSubTitle">VI</p>
-                        <p class="secWorkTitle" style="font-family: Noto Serif TC">楓茶米</p>
-
+                    <NuxtLink to="/works/dropCoffee" class="secWorkContentBox" data-speed="1.5">
+                        <p class="secWorkSubTitle">Design</p>
+                        <!-- <p class="secWorkTitle" style="font-family: Noto Serif TC">楓茶米</p> -->
+                        <p class="secWorkTitle" >DropCoffe</p>
                         <div class="secWorkMore">更多</div>
 
 

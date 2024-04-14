@@ -15,7 +15,7 @@
                 <input type="text" class="input" id="name" autocomplete="off">
                 <div class="inputBoxTitleBox">
                     <label id="nameLabel" for="name">稱呼</label>
-                    <div class="feedback">必填</div>
+                    <div class="feedback"></div>
                 </div>
 
 
@@ -26,7 +26,7 @@
                 <input type="tel" class="input" id="tel" autocomplete="off">
                 <div class="inputBoxTitleBox">
                     <label id="telLabel" for="tel">電話</label>
-                    <div class="feedback">必填</div>
+                    <div class="feedback"></div>
                 </div>
 
 
@@ -37,7 +37,7 @@
                 <input type="email" class="input" id="email" autocomplete="off">
                 <div class="inputBoxTitleBox">
                     <label id="emailLabel" for="email">電子郵件</label>
-                    <div class="feedback">必填</div>
+                    <div class="feedback"></div>
                 </div>
 
 
@@ -49,7 +49,7 @@
                 <textarea  class="textarea" id="other" autocomplete="off"></textarea>
                 <div class="inputBoxTitleBox">
                     <label id="otherLabel" for="other">其他</label>
-                    <div class="feedback">必填</div>
+                    <div class="feedback"></div>
                 </div>
 
 
@@ -280,7 +280,7 @@
                 font-weight: 400;
                 line-height: 190%; /* 38px */
                 letter-spacing: 10px;
-                padding-left: 10px;
+                padding-left: 15px;
                 cursor: pointer;
                 transition: 0.3s ease-in-out;
 
